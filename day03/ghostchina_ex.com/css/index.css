@@ -1,0 +1,270 @@
+body,ul {
+    margin:0;
+    padding:0;
+}
+/*类选择器*/
+.container{
+    width: 100%;
+    background: #EBEBEB;
+
+}
+.header{
+
+}
+.header .logo{
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/logo.jpg");
+   /*位移*/
+    background-position: 0px -50px;
+    /*平铺*/
+    background-repeat: no-repeat;
+    /*移动*/
+    background-size: cover;
+}
+
+.header .nav{
+    width: 100%;
+    height: 85px;
+
+}
+.header .nav ul{
+
+
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.header .nav ul li{
+    width:100px;
+    height:55px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 55px;
+    /*border-bottom: solid 2px red;*/
+}
+/*使第一个元素有下划线*/
+.header .nav ul li:first-child{
+    border-bottom: solid 2px orange;
+}
+.header .nav ul li a{
+    /*去掉超链接的下划线*/
+    text-decoration: none;
+    color:#4b4b4b;
+}
+.header .nav ul li:hover a{
+    /*鼠标放在超链接上变色,变的是链接上的字*/
+    color:orange;
+
+}
+.main{
+    /*width:1200px;*/
+    width: 90%;
+    /*height: 600px;*/
+    background: #EBEBEB;
+    margin: auto;
+    margin-top: 30px;
+    /*设置div排列方式*/
+    display: flex;
+    /*排列方向*/
+    flex-direction: row;
+    /*对齐方式flex-end....,*/
+    justify-content: space-between;
+    /*自动换到下一行
+    flex-wrap: wrap;*/
+
+}
+.main .main-left{
+    width:65%;
+    /*height:550px;*/
+    background: white;
+}
+.main .main-left h1,h5{
+    margin-top: 20px;
+    text-align: center;
+
+}
+.main .main-left h5 span{
+    color: orange;
+}
+.main .main-left .content{
+    display: flex;
+    flex-direction: row;
+    padding: 4%;
+    font-size: 20px;
+    flex-wrap: wrap;
+}
+.main .main-left .button{
+    width: 70px;
+    background: orange;
+    margin-top: 20px;
+    margin-left:5%;
+    /*border-bottom: solid 2px orange;*/
+
+}
+.main .main-left .button:hover{
+   background: gray;
+}
+.main-left .line{
+    width: 90%;
+    height: 1px;
+    margin-top:20px;
+    margin-left: 5%;
+    background:gray;
+    margin-bottom: 20px;
+}
+.main .list{
+    width: 100px;
+    height: 50px;
+    background:white;
+   margin-left: 5%;
+    background-image: url("../icons/open.PNG");
+    background-repeat: no-repeat;
+}
+.main .main-right{
+    width: 30%;
+    /*height: 550px;*/
+
+    background:blueviolet;
+}
+
+.footer{
+    width: 100%;
+    /*height: 300px;*/
+    margin-top: 20px;
+    background: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.footer .footer-inner{
+    width:300px;
+    /*height:300px;*/
+    /*background: pink;*/
+    color:white;
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+.footer .line-seperate-long{
+    width:100%;
+    height:1px;
+    background:rgba(128,128,128,0.65);
+}
+.footer .line-seperate-short{
+    width:30%;
+    height:1px;
+    background: orange;
+    margin-top: -1px;
+}
+.footer .footer-inner ul{
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.footer .footer-inner ul li{
+    font-size: 14px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 5px;
+}
+.footer .footer-inner ul li:hover{
+    background: orange;
+
+}
+/*响应布局*/
+/*小于750为手机屏幕*/
+@media screen and (max-width: 750px){
+    .header .nav{
+        display: none;
+    }
+    .header .nav-phone{
+        display: block;
+        width: 100px;
+        height: 50px;
+        background:#EBEBEB;
+        margin: auto;
+        background-image: url("../icons/list1.PNG");
+        background-repeat: no-repeat;
+
+    }
+
+    .main{
+        list-style: none;
+        margin-top: 10px;
+        padding: 4%;
+        display: flex;
+        /*flex-direction: row;*/
+      flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .main .main-left{
+        width: 100%;
+        padding: 4%;
+    }
+    .main .main-right{
+        width: 100%;
+        padding: 4%;
+        margin-top: 20px;
+    }
+
+    .footer .footer-inner{
+        width:100%;
+       height: auto;
+    }
+}
+/*屏幕范围为750到970之间,平板*/
+@media screen and (min-width: 750px) and (max-width: 970px){
+
+    .footer .footer-inner{
+        width: 450px;
+    }
+    .header .nav-phone{
+        display: none;
+    }
+
+    .main {
+        list-style: none;
+        margin-top: 10px;
+        padding: 4%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .main .main-left{
+        width: 100%;
+        padding: 4%;
+    }
+    .main .main-right{
+        width: 100%;
+        padding: 4%;
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: 970px){
+    .header .nav-phone{
+        display: none;
+    }
+}
+/**
+空格表示内部所有的元素
+逗号表示并列
+ */
+/*.header div{*/
+
+/*}*/
+/*.header .logo,.header .nav{*/
+    /**/
+/*}*/
+/*!***/
+/*选中.header的直接子元素*/
+ /**!*/
+/*.header>div{*/
+
+/*}*/

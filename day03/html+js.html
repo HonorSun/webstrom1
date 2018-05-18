@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <style>
+        div{
+            width: 300px;
+            height: 60px;
+            background: yellow;
+        }
+        .div01{
+            background: red;
+        }
+        .div03{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="div01" id="first"></div>
+    <div class="div02"></div>
+    <div class="div03"></div>
+    <div class="div04"></div>
+    <script type="text/javascript">
+        // 事件触发机制
+        // 三要素 事件源  事件  行为
+        S('#first').click(function () {
+            $('#first').css({background:'yellow'});
+        })
+
+    </script>
+</body>
+</html>
